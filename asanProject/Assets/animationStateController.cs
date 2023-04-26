@@ -5,11 +5,13 @@ using UnityEngine;
 public class animationStateController : MonoBehaviour
 {
     Animator animator;
+    int isWalkingHash;
 
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        isWalkingHash = Animator.StringToHash("isWalking");
 
 
     }
@@ -17,18 +19,22 @@ public class animationStateController : MonoBehaviour
     
     void Update()
     {
+        bool isWalking = animator.GetBool("isWalking");
+        bool forwardPressed = Input.GetKey("w");
+
+
         //if players presses forward (W) key
-        if (Input.GetKey("w"))
+        if (!isWalking && forwardPressed)
         {
             //then iswalking boolean is set to true
-            animator.SetBool("isWalking", true);
+            animator.SetBool(isWalkingHash, true);
         }
 
         //if the player is not pressing forwards (w)
-        if (!Input.GetKey("w"))
+        if (isWalking & !forwardPressed)
         {
             //iswalking boolean is set to false
-            animator.SetBool("isWalking", false);
+            animator.SetBool(isWalkingHash, false);
         }
 
 
