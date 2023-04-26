@@ -19,6 +19,7 @@ public class FindLand : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 transform.position = hit.point;
+                
             }
         }
     }

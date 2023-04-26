@@ -3,7 +3,28 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Branch_01
+  - Bush_01
+  - Bush_02
+  - Bush_03
+  - Flowers_01
+  - Flowers_02
+  - Grass_01
+  - Grass_02
+  - Mushroom_01
+  - Mushroom_02
+  - Rock_01
+  - Rock_02
+  - Rock_03
+  - Rock_04
+  - Rock_05
+  - Stump_01
+  - Tree_01
+  - Tree_02
+  - Tree_03
+  - Tree_04
+  - Tree_05
   layers:
   - Default
   - TransparentFX
