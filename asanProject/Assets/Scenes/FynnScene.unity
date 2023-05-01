@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 1853321222}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1143,6 +1143,10 @@ PrefabInstance:
     - target: {fileID: 2809819077601076265, guid: 259eacb2be80de847ba3018c41698c4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809819077601076266, guid: 259eacb2be80de847ba3018c41698c4d, type: 3}
+      propertyPath: timeBetweenOxygen
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2809819077898983362, guid: 259eacb2be80de847ba3018c41698c4d, type: 3}
       propertyPath: m_AnchorMax.x
