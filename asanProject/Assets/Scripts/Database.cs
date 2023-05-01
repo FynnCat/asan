@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Database : MonoBehaviour
 {
-    [SerializeField] int scanTime;
+    [SerializeField] int scanTime, epx;
     public bool Branch_01 = false, Bush_01 = false, Bush_02 = false, Bush_03 = false, Flowers_01 = false, Flowers_02 = false, Grass_01 = false, Grass_02 = false, Mushroom_01 = false, Mushroom_02 = false, Rock_01 = false, Rock_02 = false, Rock_03 = false, Rock_04 = false, Rock_05 = false, Stump_01 = false, Tree_01 = false, Tree_02 = false, Tree_03 = false, Tree_04 = false, Tree_05 = false;
     [SerializeField] GameObject Branch_01Data, Bush_01Data, Bush_02Data, Bush_03Data, Flowers_01Data, Flowers_02Data, Grass_01Data, Grass_02Data, Mushroom_01Data, Mushroom_02Data, Rock_01Data, Rock_02Data, Rock_03Data, Rock_04Data, Rock_05Data, Stump_01Data, Tree_01Data, Tree_02Data, Tree_03Data, Tree_04Data, Tree_05Data;
-    
+    [SerializeField] Camera _camera;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _camera = Camera.main;
     }
 
     // Update is called once per frame
@@ -106,7 +106,7 @@ public class Database : MonoBehaviour
 
     public void OnScan()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(_camera.transform.position, transform.forward);
         RaycastHit hit;
        // yield return new WaitForSeconds(scanTime);
         if (Physics.Raycast(ray, out hit))
@@ -115,6 +115,7 @@ public class Database : MonoBehaviour
             if (hit.transform.tag == "Branch_01")
             {
                 Branch_01 = true;
+
             }
             if (hit.transform.tag == "Bush_01")
             {

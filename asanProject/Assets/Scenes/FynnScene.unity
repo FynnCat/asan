@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 1000420692}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,6 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scanTime: 2
+  epx: 0
   Branch_01: 0
   Bush_01: 0
   Bush_02: 0
@@ -897,6 +898,7 @@ MonoBehaviour:
   Tree_03Data: {fileID: 1622048472}
   Tree_04Data: {fileID: 1715613567}
   Tree_05Data: {fileID: 978754353}
+  _camera: {fileID: 0}
 --- !u!1 &1069812697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scanTime: 2
+  epx: 0
   Branch_01: 0
   Bush_01: 0
   Bush_02: 0
@@ -1680,6 +1683,7 @@ MonoBehaviour:
   Tree_03Data: {fileID: 0}
   Tree_04Data: {fileID: 0}
   Tree_05Data: {fileID: 0}
+  _camera: {fileID: 0}
 --- !u!1 &1870416499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6462563281723598613, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
