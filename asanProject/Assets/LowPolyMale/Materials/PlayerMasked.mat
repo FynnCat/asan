@@ -15,14 +15,16 @@ MonoBehaviour:
   version: 1
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PlayerMasked
   m_Shader: {fileID: 4800000, guid: 85a3ef2b21690794bacdb684cfe7c5f3, type: 3}
-  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF
+  m_ValidKeywords:
+  - _GLOSSYREFLECTIONS_OFF
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -224,6 +226,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AlphaClip: 0
     - _Blend: 0
@@ -278,14 +281,14 @@ Material:
     - _Colour15: {r: 1, g: 1, b: 1, a: 0}
     - _Colour16: {r: 1, g: 1, b: 1, a: 0}
     - _ColourEyes: {r: 0, g: 0, b: 0, a: 1}
-    - _ColourFaceHair: {r: 0.3773585, g: 0.33667293, b: 0.29725882, a: 1}
-    - _ColourHair: {r: 0.1981132, g: 0.17770262, b: 0.15792987, a: 1}
-    - _ColourHair2: {r: 0.3773585, g: 0.33667293, b: 0.29725882, a: 1}
-    - _ColourMouth: {r: 0.7735849, g: 0.6679381, b: 0.56559277, a: 1}
-    - _ColourSkin: {r: 0.9568628, g: 0.8313726, b: 0.70980394, a: 1}
+    - _ColourFaceHair: {r: 0.1981132, g: 0.17770262, b: 0.15792987, a: 1}
+    - _ColourHair: {r: 0.9568628, g: 0.93725497, b: 0.41176474, a: 1}
+    - _ColourHair2: {r: 0.9568628, g: 0.93725497, b: 0.41176474, a: 1}
+    - _ColourMouth: {r: 0, g: 0, b: 0, a: 1}
+    - _ColourSkin: {r: 0.9058824, g: 0.8000001, b: 0.6745098, a: 1}
     - _ColourUnderwearB: {r: 0, g: 0, b: 0, a: 1}
     - _ColourUnderwearBottom: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
-    - _ColourUnderwearT: {r: 1, g: 1, b: 1, a: 1}
+    - _ColourUnderwearT: {r: 0.23137257, g: 0.45882356, b: 0.44705886, a: 1}
     - _ColourUnderwearTop: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EyesColour: {r: 0, g: 0, b: 0, a: 1}
@@ -301,3 +304,4 @@ Material:
     - _UW2Colour: {r: 1, g: 1, b: 1, a: 1}
     - _Vector0: {r: 0, g: 0, b: 0, a: 0}
     - _Vector1: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
