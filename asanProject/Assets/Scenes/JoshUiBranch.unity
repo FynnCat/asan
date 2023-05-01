@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &228090362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8340893915225901521, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
+  m_PrefabInstance: {fileID: 4051239247430122242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &245078465
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9acf41fea53ad104d82137a35da6e941, type: 3}
+--- !u!1 &919197506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8712776711858306001, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
+  m_PrefabInstance: {fileID: 4051239247430122242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1139234988
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +352,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 38.852, y: -30, z: 0}
+--- !u!1 &1356798890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8529316715593774087, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
+  m_PrefabInstance: {fileID: 4051239247430122242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1660674933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6477068256249026628, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
+  m_PrefabInstance: {fileID: 4051239247430122242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1703505528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4264693314569833705, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
+  m_PrefabInstance: {fileID: 4051239247430122242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4051239247430122242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -474,6 +499,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4183574855813442194, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
+      propertyPath: Bush_01Data
+      value: 
+      objectReference: {fileID: 1703505528}
+    - target: {fileID: 4183574855813442194, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
+      propertyPath: Bush_02Data
+      value: 
+      objectReference: {fileID: 1356798890}
+    - target: {fileID: 4183574855813442194, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
+      propertyPath: Rock_04Data
+      value: 
+      objectReference: {fileID: 228090362}
+    - target: {fileID: 4183574855813442194, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
+      propertyPath: Branch_01Data
+      value: 
+      objectReference: {fileID: 1660674933}
+    - target: {fileID: 4183574855813442194, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
+      propertyPath: Flowers_01Data
+      value: 
+      objectReference: {fileID: 919197506}
     - target: {fileID: 8444526059723504851, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
@@ -522,5 +567,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4183574855813442194, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
