@@ -50,7 +50,7 @@ public class RandomPlacement : MonoBehaviour
     void SecondPlacement()
     {
         Debug.Log("Hello");
-        int num3 = Random.Range(4, 20);
+        int num3 = Random.Range(1, 5);
         int num4 = 0;
 
         while (num4 < num3)

@@ -8,6 +8,8 @@ public class OxygenManager : MonoBehaviour
     public int timeBetweenOxygen;
     [SerializeField] Slider _oxygenSlider;
     public int _maxOxygen, _currentOxygen;
+    [SerializeField] TriggerEnterEnemies _enterEnemies;
+    [SerializeField] Text _fillText;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,16 +22,23 @@ public class OxygenManager : MonoBehaviour
     void Update()
     {
         _oxygenSlider.value = _currentOxygen;
+        if (_enterEnemies.entered)
+        {
+            _fillText.text = "Press 'F' to fill body oxygen tank.";
+        }
+        else
+            _fillText.text = "fill body oxygen tank.";
     }
 
     public void FillOxygen()
     {
-        _oxygenSlider.value = _maxOxygen;
+        if (_enterEnemies.entered)
+        _currentOxygen = _maxOxygen;
     }
     IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(timeBetweenOxygen);
-        _currentOxygen = _currentOxygen - 5;
+        _currentOxygen = _currentOxygen - 3;
         StartCoroutine(WaitTime());
     }
 }
