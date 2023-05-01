@@ -2834,9 +2834,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The colonisers were not sent out to the planet as per your request. After
-    you had left scientists found signs of ever increasing drought covering the planet.
-    thanks to your assessment nobody was harmed.
+  m_text: The colonisers were not sent out to the planet as per your request. However
+    after further research by the science team this planet is thought to be very
+    welcoming to the human race. Overpopulation has gotten more severe no thanks
+    to your bad assessment.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
