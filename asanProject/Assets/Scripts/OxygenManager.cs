@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OxygenManager : MonoBehaviour
 {
@@ -23,12 +24,18 @@ public class OxygenManager : MonoBehaviour
     void Update()
     {
         _oxygenSlider.value = _currentOxygen;
+        if (_currentOxygen <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
         if (_enterEnemies.entered)
         {
             _fillText.text = "Press 'F' to fill body oxygen tank.";
         }
         else
             _fillText.text = "fill body oxygen tank.";
+
+
     }
 
     public void FillOxygen()
