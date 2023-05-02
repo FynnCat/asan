@@ -11,7 +11,7 @@ public class OxygenManager : MonoBehaviour
     public int _maxOxygen, _currentOxygen;
     [SerializeField] TriggerEnterEnemies _enterEnemies;
     [SerializeField] Text _fillText;
-    int _refills;
+    [SerializeField] int _refills;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +40,7 @@ public class OxygenManager : MonoBehaviour
 
     public void FillOxygen()
     {
-        if (_enterEnemies.entered && _refills != 3)
+        if (_enterEnemies.entered && _refills != 9)
         {
             _currentOxygen = _maxOxygen;
             _refills++;
