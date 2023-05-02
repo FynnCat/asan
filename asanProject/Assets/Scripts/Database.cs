@@ -341,9 +341,6 @@ public class Database : MonoBehaviour
 
         }
     }
-    public void EndScanning()
-    {
-        animator.SetBool("Scanning", false);
-    }
+   
 
 }
