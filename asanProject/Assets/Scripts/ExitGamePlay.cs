@@ -9,7 +9,7 @@ public class ExitGamePlay : MonoBehaviour
 {
     [SerializeField] Database _database;
     [SerializeField] Slider _playerChoiceSlider;
-    public int playerChoice;
+    public int playerChoice, difference;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,39 +25,37 @@ public class ExitGamePlay : MonoBehaviour
 
     public void EndGame()
     {
-        if (_database.PlanetValue < 30 && _database.PlanetValue > 0)
+        difference = playerChoice - _database.PlanetValue;
+        if (playerChoice < 0 && difference == 0)
         {
             SceneManager.LoadScene(0);
         }
-        if (_database.PlanetValue > 30 && _database.PlanetValue < 50)
+        if (playerChoice < 0 && difference < 100)
         {
             SceneManager.LoadScene(0);
         }
-        if (_database.PlanetValue > 50 && _database.PlanetValue < 70)
+        if (playerChoice < 0 && _database.PlanetValue == 70)
         {
             SceneManager.LoadScene(0);
         }
-        if (_database.PlanetValue > 70 && _database.PlanetValue < 100)
+        if (playerChoice > 70 && _database.PlanetValue == 50)
         {
             SceneManager.LoadScene(0);
         }
-        if (_database.PlanetValue == 0)
+
+        if (playerChoice > 0 && difference == 0)
         {
             SceneManager.LoadScene(0);
         }
-        if (_database.PlanetValue < 0 && _database.PlanetValue < -30)
+        if (playerChoice > 0 && difference < 100)
         {
             SceneManager.LoadScene(0);
         }
-        if (_database.PlanetValue < -30 && _database.PlanetValue > -50)
+        if (playerChoice > 0 && _database.PlanetValue == 70)
         {
             SceneManager.LoadScene(0);
         }
-        if (_database.PlanetValue < -50 && _database.PlanetValue > -70)
-        {
-            SceneManager.LoadScene(0);
-        }
-        if (_database.PlanetValue < -70 && _database.PlanetValue > -30)
+        if (playerChoice > 70 && _database.PlanetValue == 50)
         {
             SceneManager.LoadScene(0);
         }
