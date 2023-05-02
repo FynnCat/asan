@@ -10,11 +10,16 @@ public class Database : MonoBehaviour
     [SerializeField] GameObject Branch_01Data, Bush_01Data, Bush_02Data, Bush_03Data, Flowers_01Data, Flowers_02Data, Grass_01Data, Grass_02Data, Mushroom_01Data, Mushroom_02Data, Rock_01Data, Rock_02Data, Rock_03Data, Rock_04Data, Rock_05Data, Stump_01Data, Tree_01Data, Tree_02Data, Tree_03Data, Tree_04Data, Tree_05Data;
     [SerializeField] Camera _camera;
     [SerializeField] ExperienceManager _experienceManager;
+    [SerializeField] GameObject Player;
+
+    [SerializeField] Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         _camera = Camera.main;
         _experienceManager = GameObject.FindObjectOfType<ExperienceManager>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+        animator = Player.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -109,12 +114,20 @@ public class Database : MonoBehaviour
 
     public void OnScan()
     {
+       // bool Scanning = Input.GetAxis("Horizontal");
+       // float VerticalInput = Input.GetAxis("Vertical");
+
+
+
+        animator.SetBool("Scanning", true);
+        
         Ray ray = new Ray(_camera.transform.position, transform.forward);
         RaycastHit hit;
        // yield return new WaitForSeconds(scanTime);
         if (Physics.Raycast(ray, out hit))
         {
             Debug.Log(hit.transform.tag);
+            Debug.Log("Scanned");
             if (hit.transform.tag == "Branch_01")
             {
                 if (Branch_01 == false)
@@ -325,6 +338,12 @@ public class Database : MonoBehaviour
                 }
                 Tree_05 = true;
             }
+
         }
     }
+    public void EndScanning()
+    {
+        animator.SetBool("Scanning", false);
+    }
+
 }
