@@ -8,7 +8,7 @@ using Unity.AI.Navigation;
 public class RandomPlacement : MonoBehaviour
 {
     [SerializeField] GameObject[] objects;
-    [SerializeField] GameObject[] objects2;
+    public GameObject[] objects2;
     [SerializeField] Transform XLoc, YLoc;
     private GameObject objectToSpawn;
     //[SerializeField] private NavMeshSurface m_Surface;
