@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3385097449623509985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3385097449623509989}
+  - component: {fileID: 3385097449623509990}
+  - component: {fileID: 3385097449623509988}
+  - component: {fileID: 3385097449623509987}
+  - component: {fileID: 3385097449623509986}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3385097449623509989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385097449623509985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3385097449623509990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385097449623509985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27ece384271513488e7892ec489da48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _saveSceneScript: {fileID: 3385097449623509988}
+  _percentageText: {fileID: 0}
+  _percentageSlider: {fileID: 0}
+  _resultSlider: {fileID: 0}
+  _estimateSlider: {fileID: 0}
+  _timeText: {fileID: 0}
+  _time: 0
+  _level: 0
+  _levelText: {fileID: 0}
+  _exitGamePlay: {fileID: 3385097449623509986}
+--- !u!114 &3385097449623509988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385097449623509985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5303cbf00002ea447b062cb2a0461179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+  _scannableItems: 0
+  _numberOfItemsScanned: 0
+  percentage: 0
+  addrepuation: 0
+  reputation: 0
+  amountUntilNextLevel: 0
+  database: {fileID: 0}
+  exitGamePlay: {fileID: 3385097449623509986}
+  level: 0
+  _randomPlacement: {fileID: 0}
+  _stopwatch: 0
+  _saveManager: {fileID: 3385097449623509987}
+--- !u!114 &3385097449623509987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385097449623509985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b5c24b9b0b294f814d3ed1c10193c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _saveManager: {fileID: 3385097449623509987}
+  _saveSceneScript: {fileID: 3385097449623509988}
+  time: 0
+  completion: 0
+  level: 0
+  levelAmount: 0
+  levelAmountCompleted: 0
+  playerChoice: 0
+  LoadScene: 0
+--- !u!114 &3385097449623509986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385097449623509985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed37743872136d43b25f836dd17e066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _database: {fileID: 0}
+  _playerChoiceSlider: {fileID: 0}
+  _endPanel: {fileID: 0}
+  playerChoice: 20
+  _endPanelActive: 0
+  _saveManager: {fileID: 0}
+  _saveSceneScript: {fileID: 0}

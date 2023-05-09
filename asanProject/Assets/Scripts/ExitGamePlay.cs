@@ -12,6 +12,9 @@ public class ExitGamePlay : MonoBehaviour
     [SerializeField] GameObject _endPanel;
     public float playerChoice;
     [SerializeField] bool _endPanelActive = false;
+    [SerializeField] SaveManager _saveManager;
+    [SerializeField] saveSceneScript _saveSceneScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -91,6 +94,13 @@ public class ExitGamePlay : MonoBehaviour
         Debug.Log("F you");
         if (_endPanelActive == true)
         {
+
+            Debug.Log("Saving...");
+           _saveManager.time = _saveSceneScript.time;
+           _saveManager.completion = _saveSceneScript.percentage;
+           _saveManager.level = _saveSceneScript.level;
+            _saveManager.levelAmountCompleted = _saveSceneScript.amountUntilNextLevel;
+            SaveSystem.SaveMoney(_saveManager);
 
             Debug.Log("??????");
             EndGame();

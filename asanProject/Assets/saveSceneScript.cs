@@ -16,12 +16,14 @@ public class saveSceneScript : MonoBehaviour
     public int level;
     [SerializeField] RandomPlacement _randomPlacement;
     [SerializeField] float _stopwatch;
+    [SerializeField] SaveManager _saveManager;
 
     // Start is called before the first frame update
     void Start()
     {
         _randomPlacement = GameObject.FindObjectOfType<RandomPlacement>();
         _scannableItems = _randomPlacement.objects2.Length + 1;
+
 
     }
 
