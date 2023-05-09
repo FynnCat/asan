@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OxygenManager : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class OxygenManager : MonoBehaviour
     [SerializeField] Slider _oxygenSlider;
     public int _maxOxygen, _currentOxygen;
     [SerializeField] TriggerEnterEnemies _enterEnemies;
-    [SerializeField] Text _fillText;
-    int _refills;
+    [SerializeField] Text _fillText, _endExplorationText;
+    [SerializeField] int _refills;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,17 +24,34 @@ public class OxygenManager : MonoBehaviour
     void Update()
     {
         _oxygenSlider.value = _currentOxygen;
+        if (_currentOxygen <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
         if (_enterEnemies.entered)
         {
             _fillText.text = "Press 'F' to fill body oxygen tank.";
         }
         else
+        {
             _fillText.text = "fill body oxygen tank.";
+ 
+        }
+        if (_enterEnemies.entered)
+        { 
+            _endExplorationText.text = "Press 'E' end exploration of this planet.";
+        }
+        else
+        {
+         
+            _endExplorationText.text = "End exploration.";
+        }
+
     }
 
     public void FillOxygen()
     {
-        if (_enterEnemies.entered && _refills != 3)
+        if (_enterEnemies.entered && _refills != 9)
         {
             _currentOxygen = _maxOxygen;
             _refills++;

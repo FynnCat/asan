@@ -58,6 +58,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "EndExploration",
+                    "type": "Button",
+                    "id": "e832ab60-b5a3-49bf-b811-955ea4fa2cc1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Submit Choice",
+                    "type": "Button",
+                    "id": "e64f4d2c-7b3c-4fa2-a68a-1ce5fc9b7575",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -196,7 +214,7 @@
                 {
                     "name": "",
                     "id": "4e0d6395-4dc0-46bc-8d08-393f5dc28b31",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": "FPSControllerInputs",
@@ -245,6 +263,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "DatabaseOpen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e1e9904-c32b-4b0f-b35b-6cc31f314b9c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EndExploration",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75028afb-fceb-4e3a-91b9-73e56d8b8d1a",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit Choice",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
