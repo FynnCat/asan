@@ -109,16 +109,6 @@ public class Database : MonoBehaviour
 
     public void OnScan()
     {
-<<<<<<< Updated upstream
-=======
-       // bool Scanning = Input.GetAxis("Horizontal");
-       // float VerticalInput = Input.GetAxis("Vertical");
-
-
-
-        //animator.SetBool("Scanning", true);
-        
->>>>>>> Stashed changes
         Ray ray = new Ray(_camera.transform.position, transform.forward);
         RaycastHit hit;
        // yield return new WaitForSeconds(scanTime);
