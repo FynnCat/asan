@@ -29,6 +29,7 @@ public class SaveManager : MonoBehaviour
             _saveSceneScript.time = data.time;
             _saveSceneScript.percentage = data.conpletion;
             _saveSceneScript.amountUntilNextLevel = data.levelAmountCompleted;
+            _saveSceneScript.amountUntilNextLevel = data.levelAmountCompleted;
             Debug.Log("WTF");
         }
         else
@@ -50,12 +51,14 @@ public class SaveManager : MonoBehaviour
     {
         LoadScene = true;
     }
-    public void save(bool open)
+    public void Save()
     {
+        Debug.Log("Saving...");
         time = _saveSceneScript.time;
         completion = _saveSceneScript.percentage;
         level = _saveSceneScript.level;
         levelAmountCompleted = _saveSceneScript.amountUntilNextLevel;
+        SaveSystem.SaveMoney(_saveManager);
 
         // SaveSystem.SaveMoney(_saveManager);
     }
