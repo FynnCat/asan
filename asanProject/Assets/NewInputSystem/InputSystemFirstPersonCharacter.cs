@@ -31,6 +31,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     // Crouch Vars
     private float initHeight;
     [SerializeField] private float crouchHeight;
+    private Animator animator;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
         controller = GetComponent<CharacterController>();
         initHeight = controller.height;
         Cursor.lockState = CursorLockMode.Locked;
+        animator = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -97,5 +99,9 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     public Vector2 GetPlayerLook()
     {
         return inputActions.FPSController.Look.ReadValue<Vector2>();
+    }
+    public void EndScanning()
+    {
+        animator.SetBool("Scanning", false);
     }
 }
