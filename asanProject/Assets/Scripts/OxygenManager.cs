@@ -10,7 +10,7 @@ public class OxygenManager : MonoBehaviour
     [SerializeField] Slider _oxygenSlider;
     public int _maxOxygen, _currentOxygen;
     [SerializeField] TriggerEnterEnemies _enterEnemies;
-    [SerializeField] Text _fillText;
+    [SerializeField] Text _fillText, _endExplorationText;
     [SerializeField] int _refills;
     // Start is called before the first frame update
     void Start()
@@ -33,8 +33,19 @@ public class OxygenManager : MonoBehaviour
             _fillText.text = "Press 'F' to fill body oxygen tank.";
         }
         else
+        {
             _fillText.text = "fill body oxygen tank.";
-
+ 
+        }
+        if (_enterEnemies.entered)
+        { 
+            _endExplorationText.text = "Press 'E' end exploration of this planet.";
+        }
+        else
+        {
+         
+            _endExplorationText.text = "End exploration.";
+        }
 
     }
 

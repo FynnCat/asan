@@ -9,7 +9,9 @@ public class ExitGamePlay : MonoBehaviour
 {
     [SerializeField] Database _database;
     [SerializeField] Slider _playerChoiceSlider;
-    public int playerChoice, difference;
+    [SerializeField] GameObject _endPanel;
+    public float playerChoice;
+    [SerializeField] bool _endPanelActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,45 +22,91 @@ public class ExitGamePlay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        playerChoice = _playerChoiceSlider.value;
     }
 
     public void EndGame()
     {
-        difference = playerChoice - _database.PlanetValue;
-        if (playerChoice < 0 && difference == 0)
+        
+        
+        if (_database.PlanetValue < 30 && _database.PlanetValue > 0 && playerChoice > 1)
         {
-            SceneManager.LoadScene(0);
+            Debug.Log("6");
+            SceneManager.LoadScene(6);
         }
-        if (playerChoice < 0 && difference < 100)
+        if (_database.PlanetValue > 30 && _database.PlanetValue < 50 && playerChoice < -1)
         {
-            SceneManager.LoadScene(0);
+            Debug.Log("4");
+            SceneManager.LoadScene(4);
         }
-        if (playerChoice < 0 && _database.PlanetValue == 70)
+        if (_database.PlanetValue > 50 && _database.PlanetValue < 70 && playerChoice < -1)
         {
-            SceneManager.LoadScene(0);
+            Debug.Log("3");
+            SceneManager.LoadScene(3);
         }
-        if (playerChoice > 70 && _database.PlanetValue == 50)
+        if (_database.PlanetValue > 70 && _database.PlanetValue < 100 && playerChoice > 1)
         {
-            SceneManager.LoadScene(0);
+            Debug.Log("5");
+            SceneManager.LoadScene(5);
         }
-
-        if (playerChoice > 0 && difference == 0)
+        if (_database.PlanetValue > 70 && _database.PlanetValue < 100 && playerChoice > 1)
         {
-            SceneManager.LoadScene(0);
+            Debug.Log("8");
+            SceneManager.LoadScene(8);
         }
-        if (playerChoice > 0 && difference < 100)
+        if (_database.PlanetValue == 0)
         {
-            SceneManager.LoadScene(0);
+            Debug.Log("N");
         }
-        if (playerChoice > 0 && _database.PlanetValue == 70)
+        if (_database.PlanetValue < 0 && _database.PlanetValue < -30 && playerChoice > 1)
         {
-            SceneManager.LoadScene(0);
+            Debug.Log("7");
+            SceneManager.LoadScene(7);
         }
-        if (playerChoice > 70 && _database.PlanetValue == 50)
+        if (_database.PlanetValue < -30 && _database.PlanetValue > -50 && playerChoice < -1)
         {
-            SceneManager.LoadScene(0);
+            Debug.Log("2");
+            SceneManager.LoadScene(2);
+        }
+        if(_database.PlanetValue > -50 && _database.PlanetValue < -100 && playerChoice < -1)
+        {
+            Debug.Log("1");
+            SceneManager.LoadScene(1);
         }
 
     }
+
+    public void EndExploration()
+    {
+        if (_endPanelActive == false)
+        {
+            _endPanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            _endPanelActive = true;
+        }
+    }
+
+    public void SaveSelection()
+    {
+        Debug.Log("F you");
+        if (_endPanelActive == true)
+        {
+
+            Debug.Log("??????");
+            EndGame();
+        }
+    }
+
+    public void CloseEndPanel()
+    {
+        Debug.Log("Started Closing...");
+        if (_endPanelActive == true)
+        {
+            Debug.Log("Entered the if");
+            _endPanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            _endPanelActive = false;
+        }
+    }
+
 }
