@@ -88,7 +88,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     
     private void OnDisable()
     {
-        inputActions.Disable();
+        //inputActions.Disable();
     }
 
     public Vector2 GetPlayerMovement()
