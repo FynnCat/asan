@@ -21,7 +21,13 @@ public class SaveManager : MonoBehaviour
     void Start()
     {
          
-            PlayerData data = SaveSystem.LoadMoney();
+         
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        PlayerData data = SaveSystem.LoadMoney();
 
         if (data != null)
         {
@@ -40,12 +46,6 @@ public class SaveManager : MonoBehaviour
             _saveSceneScript.amountUntilNextLevel = 0;
             Debug.Log("Started");
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void SetBool()
     {

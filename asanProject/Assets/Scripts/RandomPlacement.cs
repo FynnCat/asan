@@ -29,14 +29,14 @@ public class RandomPlacement : MonoBehaviour
     void SecondPlacement()
     {
         Debug.Log("Hello");
-        int num3 = Random.Range(1, 5);
+        int num3 = Random.Range(35000, 35600);
         int num4 = 0;
 
         while (num4 < num3)
         {
             objectToSpawn = objects2[Random.Range(0, objects2.Length - 1)];
-            float XPos = Random.Range(XLoc.position.x, XLoc.position.x + 10);
-            float ZPos = Random.Range(XLoc.position.z, XLoc.position.z + 10);
+            float XPos = Random.Range(XLoc.position.x, XLoc.position.x + 1000);
+            float ZPos = Random.Range(XLoc.position.z, XLoc.position.z + 1000);
             Instantiate(objectToSpawn, new Vector3(XPos, 0, ZPos), Quaternion.identity);
             num4++;
             

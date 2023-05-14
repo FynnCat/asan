@@ -9,8 +9,9 @@ public class NavmeshBuild : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // m_Surface = GetComponent<NavMeshSurface>();
-        StartCoroutine(WaitTime());
+        m_Surface = GetComponent<NavMeshSurface>();
+        m_Surface.BuildNavMesh();
+        //StartCoroutine(WaitTime());
     }
 
     // Update is called once per frame
