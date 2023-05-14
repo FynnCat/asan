@@ -6,7 +6,7 @@ public class saveSceneScript : MonoBehaviour
 {
     public float time;
     [SerializeField] int _scannableItems;
-    [SerializeField] int _numberOfItemsScanned;
+    public int _numberOfItemsScanned;
     public float percentage;
     public int addrepuation;
     public int reputation;
@@ -15,14 +15,16 @@ public class saveSceneScript : MonoBehaviour
     public ExitGamePlay exitGamePlay;
     public int level;
     [SerializeField] RandomPlacement _randomPlacement;
-    [SerializeField] float _stopwatch;
+    public float _stopwatch;
     [SerializeField] SaveManager _saveManager;
+    [SerializeField] ExitGamePlay _exitGamePlay;
 
     // Start is called before the first frame update
     void Start()
     {
         _randomPlacement = GameObject.FindObjectOfType<RandomPlacement>();
         _scannableItems = _randomPlacement.objects2.Length + 1;
+        _exitGamePlay = GameObject.FindObjectOfType<ExitGamePlay>();
 
 
     }
@@ -33,8 +35,9 @@ public class saveSceneScript : MonoBehaviour
         _stopwatch += Time.deltaTime;
     }
 
-    void EndGameplay()
+    public void EndGameplay()
     {
+        
         if (database.PlanetValue - exitGamePlay.playerChoice > 50)
         {
             addrepuation = 3;
@@ -55,7 +58,20 @@ public class saveSceneScript : MonoBehaviour
 
         //Time.
         time = _stopwatch;
+
+        _exitGamePlay.SaveSelection();
+
         
+    }
+
+    public void EndMenuGameplay()
+    {
+        if (_exitGamePlay._endPanelActive == false)
+        {
+            _exitGamePlay._endPanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            _exitGamePlay._endPanelActive = true;
+        }
     }
 
 
