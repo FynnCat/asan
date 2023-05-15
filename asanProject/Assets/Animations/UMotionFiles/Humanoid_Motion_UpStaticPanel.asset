@@ -20,7 +20,7 @@ MonoBehaviour:
     PoseToolPivotMode:
       valueInternal: 0
     PoseToolMode:
-      valueInternal: 2
+      valueInternal: 1
     PoseMirrorMode:
       valueInternal: 0
     ConfigMode:
@@ -159,7 +159,7 @@ MonoBehaviour:
       BonesVisible:
         valueInternal: 1
       TransformsVisible:
-        valueInternal: 1
+        valueInternal: 0
       NamesVisible:
         valueInternal: 0
       ToolAssistantVisible:

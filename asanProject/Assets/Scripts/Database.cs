@@ -6,15 +6,17 @@ public class Database : MonoBehaviour
 {
     [SerializeField] int scanTime, epx;
     public int PlanetValue;
-    public bool Branch_01 = false, Bush_01 = false, Bush_02 = false, Bush_03 = false, Flowers_01 = false, Flowers_02 = false, Grass_01 = false, Grass_02 = false, Mushroom_01 = false, Mushroom_02 = false, Rock_01 = false, Rock_02 = false, Rock_03 = false, Rock_04 = false, Rock_05 = false, Stump_01 = false, Tree_01 = false, Tree_02 = false, Tree_03 = false, Tree_04 = false, Tree_05 = false;
-    [SerializeField] GameObject Branch_01Data, Bush_01Data, Bush_02Data, Bush_03Data, Flowers_01Data, Flowers_02Data, Grass_01Data, Grass_02Data, Mushroom_01Data, Mushroom_02Data, Rock_01Data, Rock_02Data, Rock_03Data, Rock_04Data, Rock_05Data, Stump_01Data, Tree_01Data, Tree_02Data, Tree_03Data, Tree_04Data, Tree_05Data;
+    public bool Branch_01 = false, Bush_01 = false, Bush_02 = false, Bush_03 = false, Flowers_01 = false, Flowers_02 = false, Grass_01 = false, Grass_02 = false, Mushroom_01 = false, Mushroom_02 = false, Rock_01 = false, Rock_02 = false, Rock_03 = false, Rock_04 = false, Rock_05 = false, Stump_01 = false, Tree_01 = false, Tree_02 = false, Tree_03 = false, Tree_04 = false, Tree_05 = false, ASAN_Creature_01 = false, ASAN_Creature_02, ASAN_Creature_03, ASAN_Creature_04;
+    [SerializeField] GameObject Branch_01Data, Bush_01Data, Bush_02Data, Bush_03Data, Flowers_01Data, Flowers_02Data, Grass_01Data, Grass_02Data, Mushroom_01Data, Mushroom_02Data, Rock_01Data, Rock_02Data, Rock_03Data, Rock_04Data, Rock_05Data, Stump_01Data, Tree_01Data, Tree_02Data, Tree_03Data, Tree_04Data, Tree_05Data, ASAN_Creature_01Data, ASAN_Creature_02Data, ASAN_Creature_03Data, ASAN_Creature_04Data;
     [SerializeField] Camera _camera;
     [SerializeField] ExperienceManager _experienceManager;
+    [SerializeField] saveSceneScript _saveSceneScript;
     // Start is called before the first frame update
     void Start()
     {
         _camera = Camera.main;
         _experienceManager = GameObject.FindObjectOfType<ExperienceManager>();
+        _saveSceneScript = GameObject.FindObjectOfType<saveSceneScript>();
     }
 
     // Update is called once per frame
@@ -105,6 +107,22 @@ public class Database : MonoBehaviour
         {
             Tree_05Data.SetActive(true);
         }
+        if (ASAN_Creature_01)
+        {
+            ASAN_Creature_01Data.SetActive(true);
+        }
+        if (ASAN_Creature_02)
+        {
+            ASAN_Creature_02Data.SetActive(true);
+        }
+        if (ASAN_Creature_03)
+        {
+            ASAN_Creature_03Data.SetActive(true);
+        }
+        if (ASAN_Creature_04)
+        {
+            ASAN_Creature_04Data.SetActive(true);
+        }
     }
 
     public void OnScan()
@@ -118,7 +136,8 @@ public class Database : MonoBehaviour
             if (hit.transform.tag == "Branch_01")
             {
                 if (Branch_01 == false)
-                { 
+                {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue +5;
@@ -129,6 +148,7 @@ public class Database : MonoBehaviour
             {
                 if (Bush_01 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -139,6 +159,7 @@ public class Database : MonoBehaviour
             {
                 if (Bush_02 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -149,6 +170,7 @@ public class Database : MonoBehaviour
             {
                 if (Bush_03 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -159,6 +181,7 @@ public class Database : MonoBehaviour
             {
                 if (Flowers_01 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -169,6 +192,7 @@ public class Database : MonoBehaviour
             {
                 if (Flowers_02 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -179,6 +203,7 @@ public class Database : MonoBehaviour
             {
                 if (Grass_01 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -189,6 +214,7 @@ public class Database : MonoBehaviour
             {
                 if (Grass_02 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -199,6 +225,7 @@ public class Database : MonoBehaviour
             {
                 if (Mushroom_01 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -209,6 +236,7 @@ public class Database : MonoBehaviour
             {
                 if (Mushroom_02 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -219,6 +247,7 @@ public class Database : MonoBehaviour
             {
                 if (Rock_01 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -229,6 +258,7 @@ public class Database : MonoBehaviour
             {
                 if (Rock_02 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -239,6 +269,7 @@ public class Database : MonoBehaviour
             {
                 if (Rock_03 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -249,6 +280,7 @@ public class Database : MonoBehaviour
             {
                 if (Rock_04 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -259,6 +291,7 @@ public class Database : MonoBehaviour
             {
                 if (Rock_05 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -269,6 +302,7 @@ public class Database : MonoBehaviour
             {
                 if (Stump_01 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -279,6 +313,7 @@ public class Database : MonoBehaviour
             {
                 if (Tree_01 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -289,6 +324,7 @@ public class Database : MonoBehaviour
             {
                 if (Tree_02 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -299,6 +335,7 @@ public class Database : MonoBehaviour
             {
                 if (Tree_03 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -309,6 +346,7 @@ public class Database : MonoBehaviour
             {
                 if (Tree_04 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
@@ -319,12 +357,57 @@ public class Database : MonoBehaviour
             {
                 if (Tree_05 == false)
                 {
+                    _saveSceneScript._numberOfItemsScanned++;
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
                 }
-                Tree_05 = true;
             }
+                Tree_05 = true;
+                if (hit.transform.tag == "ASAN_Creature_01")
+                {
+                    if (ASAN_Creature_01 == false)
+                    {
+                        _saveSceneScript._numberOfItemsScanned++;
+                        _experienceManager.HabGoodSlider.value++;
+                        _experienceManager.exp = _experienceManager.exp + 15;
+                        PlanetValue = PlanetValue + 5;
+                    }
+                }
+                    ASAN_Creature_01 = true;
+                    if (hit.transform.tag == "ASAN_Creature_02")
+                    {
+                        if (ASAN_Creature_02 == false)
+                        {
+                            _saveSceneScript._numberOfItemsScanned++;
+                            _experienceManager.HabGoodSlider.value++;
+                            _experienceManager.exp = _experienceManager.exp + 15;
+                            PlanetValue = PlanetValue + 5;
+                        }
+                    }
+                        ASAN_Creature_02 = true;
+                        if (hit.transform.tag == "ASAN_Creature_03")
+                        {
+                            if (ASAN_Creature_03 == false)
+                            {
+                                _saveSceneScript._numberOfItemsScanned++;
+                                _experienceManager.HabGoodSlider.value++;
+                                _experienceManager.exp = _experienceManager.exp + 15;
+                                PlanetValue = PlanetValue + 5;
+                            }
+                        }
+                            ASAN_Creature_03 = true;
+                            if (hit.transform.tag == "ASAN_Creature_04")
+                            {
+                                if (ASAN_Creature_04 == false)
+                                {
+                                    _saveSceneScript._numberOfItemsScanned++;
+                                    _experienceManager.HabGoodSlider.value++;
+                                    _experienceManager.exp = _experienceManager.exp + 15;
+                                    PlanetValue = PlanetValue + 5;
+                                }
+                                ASAN_Creature_04 = true;
+                            }
         }
     }
 }

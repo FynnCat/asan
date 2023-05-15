@@ -25,11 +25,15 @@ TagManager:
   - Tree_03
   - Tree_04
   - Tree_05
+  - ASAN_Creature_01
+  - ASAN_Creature_02
+  - ASAN_Creature_03
+  - ASAN_Creature_04
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Post Processing - UI
   - Water
   - UI
   - Gun
