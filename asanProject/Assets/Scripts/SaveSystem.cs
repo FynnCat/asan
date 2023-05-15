@@ -14,7 +14,7 @@ public static class SaveSystem
         Debug.Log(path);
 
         PlayerData data = new PlayerData(_saveManager);
-
+        Debug.Log(data.level + "\n" + data.time + "\n" + data.conpletion + "\n" + data.planetValue + "\n" + data.playerChoice);
         formatter.Serialize(stream, data);
         stream.Close();
     }
