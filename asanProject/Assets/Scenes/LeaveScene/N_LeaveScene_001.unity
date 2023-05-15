@@ -17069,9 +17069,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The colonisers were not sent out to the planet as per your request. One
-    week after your vist the planet was shown to have extremely toxic rain water.
-    Because of your fair assessment you saved the first fleet.
+  m_text: The colonisers were not sent out to the planet as per your request. After
+    you had left scientists found signs of ever increasing drought covering the planet.
+    thanks to your assessment nobody was harmed.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7434d33106fe0e849890c0dbe92d70d1, type: 2}
   m_sharedMaterial: {fileID: -275754898207289959, guid: 7434d33106fe0e849890c0dbe92d70d1, type: 2}
