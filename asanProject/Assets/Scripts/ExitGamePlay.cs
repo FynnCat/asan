@@ -108,6 +108,7 @@ public class ExitGamePlay : MonoBehaviour
             Debug.Log("Saving...");
            _saveManager.time = _saveSceneScript._stopwatch;
            _saveManager.completion = _saveSceneScript.percentage;
+            Debug.Log("Percentage: " + _saveSceneScript.percentage);
            _saveManager.level = _saveSceneScript.level;
             _saveManager.levelAmountCompleted = _saveSceneScript.amountUntilNextLevel;
             SaveSystem.SaveMoney(_saveManager);

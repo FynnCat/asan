@@ -18,7 +18,9 @@ public class saveSceneScript : MonoBehaviour
     public float _stopwatch;
     [SerializeField] SaveManager _saveManager;
     [SerializeField] ExitGamePlay _exitGamePlay;
-
+    public int planetValue;
+    public float playersChoice;
+    [SerializeField] Database _database;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,14 @@ public class saveSceneScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        planetValue = _database.PlanetValue;
+        //PlayersChoice. 
+        playersChoice = _exitGamePlay.playerChoice;
+        Debug.Log(playersChoice);
         _stopwatch += Time.deltaTime;
+        Debug.Log( "Result " + (_scannableItems / _numberOfItemsScanned));
+        
+        
     }
 
     public void EndGameplay()
@@ -40,11 +49,11 @@ public class saveSceneScript : MonoBehaviour
         
         if (database.PlanetValue - exitGamePlay.playerChoice > 50)
         {
-            addrepuation = 3;
+            //addrepuation = 3;
         }
         else if (database.PlanetValue - exitGamePlay.playerChoice < 50)
         {
-            reputation = 7;
+            level++;
         }
             amountUntilNextLevel = amountUntilNextLevel - addrepuation;
         if (amountUntilNextLevel < 0)
@@ -53,11 +62,19 @@ public class saveSceneScript : MonoBehaviour
             amountUntilNextLevel = (level + 20) * 6;
         }
 
-        //Working out percentage.
-        percentage = (_numberOfItemsScanned/_scannableItems) * 100;
+        //Working out percentage.]
+        Debug.Log("Percentage: " + percentage);
+        percentage = ( (float)_numberOfItemsScanned / (float)_scannableItems) * 100;
+        Debug.Log("New percentage: " + percentage);
 
         //Time.
         time = _stopwatch;
+
+        //PlanetValue.
+        
+        Debug.Log(planetValue);
+
+        
 
         _exitGamePlay.SaveSelection();
 

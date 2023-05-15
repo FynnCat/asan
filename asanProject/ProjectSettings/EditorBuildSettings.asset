@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 11cf7f91b25aaa84bb5a85e05e57c9d1
+  - enabled: 1
     path: Assets/Scenes/FynnScene.unity
     guid: 53efc2768e1a91d42bb76d6375d47282
   - enabled: 1
@@ -32,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LeaveScene/Y_LeaveScene_004.unity
     guid: 3428812abd8256444b45160e437a5ec7
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 408f49dfaac2289488f4b67c9bc27609
   m_configObjects: {}
