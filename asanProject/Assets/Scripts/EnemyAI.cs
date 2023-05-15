@@ -9,13 +9,13 @@ public class EnemyAI : MonoBehaviour
     public float moveSpeed = 5f;
     public float detectionRange = 10f;
     private Rigidbody rb;
-    NavMeshAgent navMeshAgent;
+   [SerializeField] NavMeshAgent navMeshAgent;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
-        navMeshAgent.GetComponent<NavMeshAgent>();
+        //navMeshAgent.GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -32,7 +32,7 @@ public class EnemyAI : MonoBehaviour
             // Move towards the player
             navMeshAgent.destination = player.transform.position;
             navMeshAgent.stoppingDistance = 7;
-            rb.velocity = direction * moveSpeed;
+            //rb.velocity = direction * moveSpeed;
         }
         else
         {

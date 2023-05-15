@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 855499560298276986}
   - component: {fileID: 872094704985644544}
   - component: {fileID: 7535520979473491669}
+  - component: {fileID: 6996886922846936870}
   m_Layer: 0
   m_Name: Flowers_01
   m_TagString: Flowers_01
@@ -95,7 +96,7 @@ MeshCollider:
   m_GameObject: {fileID: 5186735023776687486}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -128,3 +129,16 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.027, y: 0.18200001, z: -0.028}
   m_TimeToStationary: 0.5
+--- !u!65 &6996886922846936870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186735023776687486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.31145722, y: 0.3828378, z: 0.3172882}
+  m_Center: {x: -0.027090028, y: 0.1818975, z: -0.027729198}

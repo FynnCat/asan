@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,9 @@ public class Database : MonoBehaviour
     [SerializeField] GameObject _scanSliderObject;
     [SerializeField] bool _startScanning;
     [SerializeField] Image[] Cursor;
+    [SerializeField] GameObject _scanContainer;
+    [SerializeField] TMP_Text _InfoText;
+    [SerializeField] AudioSource _scanAudioClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +71,7 @@ public class Database : MonoBehaviour
                 _startScanning = false;
                 scanTime = 0;
                 OnScan();
+                _scanAudioClip.Stop();
             }
         }
         if (Branch_01)
@@ -188,6 +193,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Branch_01 = true;
             }
@@ -200,6 +208,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Bush_01 = true;
             }
@@ -212,6 +223,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Bush_02 = true;
             }
@@ -224,6 +238,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Bush_03 = true;
             }
@@ -236,6 +253,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Flowers_01 = true;
             }
@@ -248,6 +268,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Flowers_02 = true;
             }
@@ -260,6 +283,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Grass_01 = true;
             }
@@ -272,6 +298,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Grass_02 = true;
             }
@@ -284,6 +313,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Mushroom_01 = true;
             }
@@ -296,6 +328,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Mushroom_02 = true;
             }
@@ -308,6 +343,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Rock_01 = true;
             }
@@ -320,6 +358,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Rock_02 = true;
             }
@@ -332,6 +373,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Rock_03 = true;
             }
@@ -344,6 +388,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Rock_04 = true;
             }
@@ -356,6 +403,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Rock_05 = true;
             }
@@ -368,6 +418,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Stump_01 = true;
             }
@@ -380,6 +433,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Tree_01 = true;
             }
@@ -392,6 +448,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Tree_02 = true;
             }
@@ -404,6 +463,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Tree_03 = true;
             }
@@ -416,6 +478,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Tree_04 = true;
             }
@@ -428,6 +493,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 Tree_05 = true;
             }
@@ -440,6 +508,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 ASAN_Creature_01 = true;
             }
@@ -452,6 +523,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 ASAN_Creature_02 = true;
             }
@@ -464,6 +538,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 ASAN_Creature_03 = true;
             }
@@ -476,6 +553,9 @@ public class Database : MonoBehaviour
                     _experienceManager.HabGoodSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
+                    _scanContainer.SetActive(true);
+                    _InfoText.text = hit.transform.tag;
+                    StartCoroutine(WaitTime());
                 }
                 ASAN_Creature_04 = true;
 
@@ -488,7 +568,13 @@ public class Database : MonoBehaviour
         {
             _scanSliderObject.SetActive(true);
             _startScanning = true;
+            _scanAudioClip.Play();
         }
+    }
+    IEnumerator WaitTime()
+    {
+       yield return new WaitForSeconds(2.5f);
+        _scanContainer.SetActive(false);
     }
 }
 
