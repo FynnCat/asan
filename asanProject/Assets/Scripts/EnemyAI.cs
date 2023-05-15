@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -8,11 +9,13 @@ public class EnemyAI : MonoBehaviour
     public float moveSpeed = 5f;
     public float detectionRange = 10f;
     private Rigidbody rb;
+    NavMeshAgent navMeshAgent;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
+        navMeshAgent.GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -27,6 +30,8 @@ public class EnemyAI : MonoBehaviour
             Vector3 direction = (player.transform.position - transform.position).normalized;
 
             // Move towards the player
+            navMeshAgent.destination = player.transform.position;
+            navMeshAgent.stoppingDistance = 7;
             rb.velocity = direction * moveSpeed;
         }
         else
