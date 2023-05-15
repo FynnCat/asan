@@ -15,6 +15,7 @@ public class Database : MonoBehaviour
     [SerializeField] Slider _scanSlider;
     [SerializeField] GameObject _scanSliderObject;
     [SerializeField] bool _startScanning;
+    [SerializeField] Image[] Cursor;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,32 @@ public class Database : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray ray = new Ray(_camera.transform.position, transform.forward);
+        RaycastHit hit;
+        // yield return new WaitForSeconds(scanTime);
+        if (Physics.Raycast(ray, out hit, 7))
+        {
+            //Debug.Log(hit.transform.tag);
+
+
+            if (hit.collider.tag == "Branch_01" || hit.collider.tag == "Bush_01" || hit.collider.tag == "Bush_02" || hit.collider.tag == "Bush_03" || hit.collider.tag == "Flowers_01" || hit.collider.tag == "Flowers_02" || hit.collider.tag == "Grass_01" || hit.collider.tag == "Grass_02" || hit.collider.tag == "Mushroom_01" || hit.collider.tag == "Mushroom_02" || hit.collider.tag == "Rock_01" || hit.collider.tag == "Rock_02" || hit.collider.tag == "Rock_03" || hit.collider.tag == "Rock_04" || hit.collider.tag == "Rock_05" || hit.collider.tag == "Stump_01" || hit.collider.tag == "Tree_01" || hit.collider.tag == "Tree_02" || hit.collider.tag == "Tree_03" || hit.collider.tag == "Tree_04" || hit.collider.tag == "Tree_05" || hit.collider.tag == "ASAN_Creature_01" || hit.collider.tag == "ASAN_Creature_02" || hit.collider.tag == "ASAN_Creature_03" || hit.collider.tag == "ASAN_Creature_04")
+            {
+                Debug.Log("Green");
+                foreach (Image i in Cursor)
+                {
+                    i.color = Color.green;
+                }
+            }
+            else //if (hit.collider == null || hit.collider.tag == "Player")
+            {
+                Debug.Log("Red");
+                foreach (Image i in Cursor)
+                {
+                    i.color = Color.red;
+                }
+            }
+        }
+
         if (_startScanning)
         {
             scanTime += Time.deltaTime;
