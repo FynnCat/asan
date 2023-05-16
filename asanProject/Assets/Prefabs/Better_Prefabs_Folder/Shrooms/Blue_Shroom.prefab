@@ -110,7 +110,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8771889740725600660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.3467117
   m_Speed: 3.5
@@ -152,5 +152,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.7, z: 0.48}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.67423177, y: 0.75609046, z: 0.58166945}
+  m_Center: {x: 0.0032859445, y: 0.008517772, z: 0.008472443}
