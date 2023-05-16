@@ -1391,6 +1391,7 @@ MonoBehaviour:
   player: {fileID: 0}
   moveSpeed: 5
   detectionRange: 10
+  navMeshAgent: {fileID: -7874438806746676686}
 --- !u!65 &-3023471086398859345
 BoxCollider:
   m_ObjectHideFlags: 0
