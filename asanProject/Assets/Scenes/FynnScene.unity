@@ -2507,7 +2507,7 @@ MonoBehaviour:
   ASAN_Creature_02Data: {fileID: 736821872}
   ASAN_Creature_03Data: {fileID: 798103922}
   ASAN_Creature_04Data: {fileID: 843925686}
-  _camera: {fileID: 0}
+  _camera: {fileID: 1000420690}
   _experienceManager: {fileID: 0}
   _saveSceneScript: {fileID: 0}
   _scanSlider: {fileID: 1860432946}
@@ -3377,90 +3377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1382274943
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1382274944}
-  - component: {fileID: 1382274946}
-  - component: {fileID: 1382274945}
-  m_Layer: 0
-  m_Name: Camera (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1382274944
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382274943}
-  m_LocalRotation: {x: 0.11106902, y: -0, z: -0, w: 0.99381274}
-  m_LocalPosition: {x: 0.18278122, y: 2.48, z: -5.96}
-  m_LocalScale: {x: 1, y: 1, z: -5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1853321219}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 12.754, y: 0, z: 0}
---- !u!81 &1382274945
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382274943}
-  m_Enabled: 1
---- !u!20 &1382274946
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382274943}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1 &1436355742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,7 +3388,7 @@ GameObject:
   - component: {fileID: 1436355743}
   - component: {fileID: 1436355744}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: ScanFinish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3504,7 +3420,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 42756d6f530ca8042acb023b72c12c7e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 29f8ec865fe0f3b4c9e8db4bb2d66f5f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3705,10 +3621,8 @@ GameObject:
   - component: {fileID: 1853321217}
   - component: {fileID: 1853321216}
   - component: {fileID: 1853321215}
-  - component: {fileID: 1853321214}
   - component: {fileID: 1853321220}
   - component: {fileID: 1853321221}
-  - component: {fileID: 1853321222}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3716,24 +3630,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1853321214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853321213}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70b7578e45dad640876b78f2040bb98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1000420690}
-  movementSpeed: 2
-  lookSensitivity: 1
-  gravity: 7
-  forceX: 3
-  forceY: 3
 --- !u!143 &1853321215
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3830,7 +3726,6 @@ Transform:
   m_Children:
   - {fileID: 2042435365}
   - {fileID: 1000420691}
-  - {fileID: 1382274944}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3869,82 +3764,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1853321222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853321213}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 165655673e0d48c49a884f36c12c7bf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scanTime: 2
-  epx: 0
-  defaultTime: 0
-  PlanetValue: 0
-  Branch_01: 0
-  Bush_01: 0
-  Bush_02: 0
-  Bush_03: 0
-  Flowers_01: 0
-  Flowers_02: 0
-  Grass_01: 0
-  Grass_02: 0
-  Mushroom_01: 0
-  Mushroom_02: 0
-  Rock_01: 0
-  Rock_02: 0
-  Rock_03: 0
-  Rock_04: 0
-  Rock_05: 0
-  Stump_01: 0
-  Tree_01: 0
-  Tree_02: 0
-  Tree_03: 0
-  Tree_04: 0
-  Tree_05: 0
-  ASAN_Creature_01: 0
-  ASAN_Creature_02: 0
-  ASAN_Creature_03: 0
-  ASAN_Creature_04: 0
-  Branch_01Data: {fileID: 0}
-  Bush_01Data: {fileID: 0}
-  Bush_02Data: {fileID: 0}
-  Bush_03Data: {fileID: 0}
-  Flowers_01Data: {fileID: 0}
-  Flowers_02Data: {fileID: 0}
-  Grass_01Data: {fileID: 0}
-  Grass_02Data: {fileID: 0}
-  Mushroom_01Data: {fileID: 0}
-  Mushroom_02Data: {fileID: 0}
-  Rock_01Data: {fileID: 0}
-  Rock_02Data: {fileID: 0}
-  Rock_03Data: {fileID: 0}
-  Rock_04Data: {fileID: 0}
-  Rock_05Data: {fileID: 0}
-  Stump_01Data: {fileID: 0}
-  Tree_01Data: {fileID: 0}
-  Tree_02Data: {fileID: 0}
-  Tree_03Data: {fileID: 0}
-  Tree_04Data: {fileID: 0}
-  Tree_05Data: {fileID: 0}
-  ASAN_Creature_01Data: {fileID: 0}
-  ASAN_Creature_02Data: {fileID: 0}
-  ASAN_Creature_03Data: {fileID: 0}
-  ASAN_Creature_04Data: {fileID: 0}
-  _camera: {fileID: 0}
-  _experienceManager: {fileID: 0}
-  _saveSceneScript: {fileID: 0}
-  _scanSlider: {fileID: 0}
-  _scanSliderObject: {fileID: 0}
-  _startScanning: 0
-  Cursor: []
-  _scanContainer: {fileID: 0}
-  _InfoText: {fileID: 0}
-  _scanAudioClip: {fileID: 0}
 --- !u!1 &1860432944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6086557805364059533, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
@@ -7005,7 +6824,8 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0.40784314
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3339000943419762257, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6324f86b0378c7e44b3306dd8a818c41, type: 3}
 --- !u!114 &2102327655 stripped
 MonoBehaviour:
