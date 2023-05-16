@@ -28,7 +28,7 @@ public class RandomPlacement : MonoBehaviour
 
     void SecondPlacement()
     {
-        Debug.Log("Hello");
+        //Debug.Log("Hello");
         int num3 = Random.Range(35000, 35600);
         int num4 = 0;
 
@@ -46,7 +46,7 @@ public class RandomPlacement : MonoBehaviour
     }
     void ThirdPlacement()
     {
-        Debug.Log("Hello");
+        //Debug.Log("Hello");
         int num3 = Random.Range(700, 1600);
         int num4 = 0;
 
