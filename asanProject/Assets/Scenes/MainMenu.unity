@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01980576, g: 0.026373435, b: 0.019687701, a: 1}
+  m_IndirectSpecularColor: {r: 0.023237523, g: 0.032106448, b: 0.02392039, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -446,6 +446,8 @@ GameObject:
   - component: {fileID: 82927144}
   - component: {fileID: 82927147}
   - component: {fileID: 82927148}
+  - component: {fileID: 82927149}
+  - component: {fileID: 82927150}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -552,6 +554,83 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skyboxSpeed: 1.2
+--- !u!114 &82927149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82927143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 1a4ea624690476044bcd273e2f275926, type: 2}
+  isGlobal: 1
+  blendDistance: 500
+  weight: 1
+  priority: 0
+--- !u!114 &82927150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82927143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 82927146}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &158839353
 GameObject:
   m_ObjectHideFlags: 0
@@ -18933,7 +19012,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 42756d6f530ca8042acb023b72c12c7e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 7174e0f5e6749b346943d9f1e1d35d67, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.034
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
