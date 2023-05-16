@@ -21,11 +21,11 @@ public static class SaveSystem
 
     public static PlayerData LoadMoney()
     {
-        Debug.Log(Application.persistentDataPath);
+        //Debug.Log(Application.persistentDataPath);
         path = Application.persistentDataPath + "/SaveData.txt";
         if (File.Exists(path))
         {
-            Debug.Log("Path: " + path);
+            //Debug.Log("Path: " + path);
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
