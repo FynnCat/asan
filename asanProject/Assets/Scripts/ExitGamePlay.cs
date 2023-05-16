@@ -70,7 +70,7 @@ public class ExitGamePlay : MonoBehaviour
             Debug.Log("N");
             SceneManager.LoadScene("N_LeaveScene_001");
         }
-        if (_database.PlanetValue < 0 && _database.PlanetValue < -30 && playerChoice > 1)
+        if (_database.PlanetValue < 0 && _database.PlanetValue > -30 && playerChoice > 1)
         {
             Debug.Log("7");
             SceneManager.LoadScene("Y_LeaveScene_003");
@@ -86,11 +86,11 @@ public class ExitGamePlay : MonoBehaviour
             SceneManager.LoadScene("N_LeaveScene_001");
         }
 
-        else
+       /* else
         {
             Debug.Log("1");
             SceneManager.LoadScene("N_LeaveScene_001");
-        }
+        }*/
 
     }
 

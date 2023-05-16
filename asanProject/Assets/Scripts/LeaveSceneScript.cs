@@ -27,7 +27,7 @@ public class LeaveSceneScript : MonoBehaviour
         _percentageSlider.minValue = 0;
         _percentageSlider.maxValue = 100;
         _percentageSlider.value = _saveSceneScript.percentage;
-        _percentageText.text = _saveSceneScript.percentage + " %";
+        _percentageText.text = (int)_saveSceneScript.percentage + " %";
 
 
         //Time.
