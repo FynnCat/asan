@@ -51,12 +51,21 @@ public class Database : MonoBehaviour
                     i.color = Color.green;
                 }
             }
-            else //if (hit.collider == null || hit.collider.tag == "Player")
+            else //if (hit.collider == null || hit.collider.tag == "Player" || hit.collider.tag == null)
             {
-                Debug.Log("Red");
+               // Debug.Log("Red");
+               Debug.Log(hit.collider.tag);
                 foreach (Image i in Cursor)
                 {
                     i.color = Color.red;
+                    if (_startScanning)
+                    {
+                        _scanSliderObject.SetActive(false);
+                        _startScanning = false;
+                        scanTime = 0;
+                        OnScan();
+                        _scanAudioClip.Stop();
+                    }
                 }
             }
         }
