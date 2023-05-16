@@ -948,6 +948,7 @@ MonoBehaviour:
   player: {fileID: 0}
   moveSpeed: 5
   detectionRange: 10
+  navMeshAgent: {fileID: -525043864021140680}
 --- !u!65 &-8729154781128678957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -959,8 +960,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.26, y: 1, z: 1.58}
-  m_Center: {x: 0, y: 0.79, z: -0.03}
+  m_Size: {x: 2.9199958, y: 1.4773302, z: 2.910522}
+  m_Center: {x: -0.11020541, y: 0.66634357, z: 0.0024929047}
 --- !u!1 &4579044759652406113
 GameObject:
   m_ObjectHideFlags: 0

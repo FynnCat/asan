@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 11cf7f91b25aaa84bb5a85e05e57c9d1
+  - enabled: 1
     path: Assets/Scenes/FynnScene.unity
     guid: 53efc2768e1a91d42bb76d6375d47282
   - enabled: 1
@@ -13,23 +16,26 @@ EditorBuildSettings:
     guid: dfea474879add1643bd8284bdd66a720
   - enabled: 1
     path: Assets/Scenes/LeaveScene/N_LeaveScene_002.unity
-    guid: 039127f1dd10a344ca00d9fc5d7d6280
+    guid: 6163c63f8b3bfc94c8b3ff53ee4d1f78
   - enabled: 1
     path: Assets/Scenes/LeaveScene/N_LeaveScene_003.unity
-    guid: b0dfc33c215223b498f211b17264853d
+    guid: 26d63e198e6d7d04797adfe342ffaec4
   - enabled: 1
     path: Assets/Scenes/LeaveScene/N_LeaveScene_004.unity
-    guid: 92cade1dab850704fb8ce4906d5aa4ec
+    guid: c774eb5c088cd8645a39671f7c4725c8
   - enabled: 1
     path: Assets/Scenes/LeaveScene/Y_LeaveScene_001.unity
-    guid: 23c3eb81438898c44920842680fb8b2d
+    guid: cc9b5aeeee2479d43893be56541b96d1
   - enabled: 1
     path: Assets/Scenes/LeaveScene/Y_LeaveScene_002.unity
-    guid: 5c598d64640a73b41bb35b0bc402d73e
+    guid: c7308ec53b2055248bbf87bd2ccb4efc
   - enabled: 1
     path: Assets/Scenes/LeaveScene/Y_LeaveScene_003.unity
-    guid: 7d85aa27034e8d340ae13e6a1093038c
+    guid: 99541cb33168937418df49cfcc39fa3a
   - enabled: 1
     path: Assets/Scenes/LeaveScene/Y_LeaveScene_004.unity
-    guid: 3428812abd8256444b45160e437a5ec7
+    guid: dea56a05417e0e14bbcba77c1a619f48
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 408f49dfaac2289488f4b67c9bc27609
   m_configObjects: {}

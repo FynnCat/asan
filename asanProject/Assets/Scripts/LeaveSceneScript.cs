@@ -14,6 +14,7 @@ public class LeaveSceneScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI _levelText;
     [SerializeField] ExitGamePlay _exitGamePlay;
     
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,8 +42,12 @@ public class LeaveSceneScript : MonoBehaviour
         _levelText.text = "lvl" + _level;
 
         //Results slider.
+        _estimateSlider.minValue = -100;
+        _estimateSlider.maxValue = 100;
+        _estimateSlider.value = _saveSceneScript.playersChoice;
+        //Results slider.
         _resultSlider.minValue = -100;
         _resultSlider.maxValue = 100;
-        _resultSlider.value = _exitGamePlay.playerChoice;
+        _resultSlider.value = _saveSceneScript.planetValue;
     }
 }
