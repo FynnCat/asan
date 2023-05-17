@@ -37,11 +37,12 @@ public class saveSceneScript : MonoBehaviour
         planetValue = _database.PlanetValue;
         //PlayersChoice. 
         playersChoice = _exitGamePlay.playerChoice;
-        Debug.Log(playersChoice);
+        //Debug.Log(playersChoice);
         _stopwatch += Time.deltaTime;
-        Debug.Log( "Result " + (_scannableItems / _numberOfItemsScanned));
         
-        
+        if (_numberOfItemsScanned != 0)
+        Debug.Log( "Result " + (_scannableItems / _numberOfItemsScanned));            
+
     }
 
     public void EndGameplay()

@@ -15,33 +15,44 @@ public class Database : MonoBehaviour
     [SerializeField] saveSceneScript _saveSceneScript;
     [SerializeField] Slider _scanSlider;
     [SerializeField] GameObject _scanSliderObject;
-    [SerializeField] bool _startScanning;
+    [SerializeField] bool _startScanning = false;
     [SerializeField] Image[] Cursor;
     [SerializeField] GameObject _scanContainer;
     [SerializeField] TMP_Text _InfoText;
     [SerializeField] AudioSource _scanAudioClip;
+    [SerializeField] AudioSource _endScanAudioSource;
     // Start is called before the first frame update
+    
     void Start()
     {
-        _camera = Camera.main;
+        //_camera = Camera.main;
         _experienceManager = GameObject.FindObjectOfType<ExperienceManager>();
         _saveSceneScript = GameObject.FindObjectOfType<saveSceneScript>();
-        _startScanning = false;
         _scanSlider.maxValue = defaultTime;
         _scanSlider.minValue = 0;
-        
+
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        Ray ray = new Ray(_camera.transform.position, transform.forward);
+
+        Vector3 rayStartPos;
+        Vector3 rayDirection;
+
+        rayStartPos = _camera.transform.position;
+        rayDirection = _camera.transform.forward;
+
+        Ray ray = new Ray(rayStartPos, rayDirection);
+
         RaycastHit hit;
         // yield return new WaitForSeconds(scanTime);
+
         if (Physics.Raycast(ray, out hit, 7))
         {
-            //Debug.Log(hit.transform.tag);
 
+            //Debug.Log(hit.transform.tag);
+            Debug.DrawRay(rayStartPos, rayDirection * 7f, Color.green);
 
             if (hit.collider.tag == "Branch_01" || hit.collider.tag == "Bush_01" || hit.collider.tag == "Bush_02" || hit.collider.tag == "Bush_03" || hit.collider.tag == "Flowers_01" || hit.collider.tag == "Flowers_02" || hit.collider.tag == "Grass_01" || hit.collider.tag == "Grass_02" || hit.collider.tag == "Mushroom_01" || hit.collider.tag == "Mushroom_02" || hit.collider.tag == "Rock_01" || hit.collider.tag == "Rock_02" || hit.collider.tag == "Rock_03" || hit.collider.tag == "Rock_04" || hit.collider.tag == "Rock_05" || hit.collider.tag == "Stump_01" || hit.collider.tag == "Tree_01" || hit.collider.tag == "Tree_02" || hit.collider.tag == "Tree_03" || hit.collider.tag == "Tree_04" || hit.collider.tag == "Tree_05" || hit.collider.tag == "ASAN_Creature_01" || hit.collider.tag == "ASAN_Creature_02" || hit.collider.tag == "ASAN_Creature_03" || hit.collider.tag == "ASAN_Creature_04")
             {
@@ -53,8 +64,8 @@ public class Database : MonoBehaviour
             }
             else //if (hit.collider == null || hit.collider.tag == "Player" || hit.collider.tag == null)
             {
-               // Debug.Log("Red");
-               Debug.Log(hit.collider.tag);
+                // Debug.Log("Red");
+                //Debug.Log(hit.collider.tag);
                 foreach (Image i in Cursor)
                 {
                     i.color = Color.red;
@@ -65,9 +76,15 @@ public class Database : MonoBehaviour
                         scanTime = 0;
                         OnScan();
                         _scanAudioClip.Stop();
+                        _endScanAudioSource.Play();
                     }
                 }
             }
+        }
+        else
+        {
+         // didn't hit anything
+            Debug.DrawRay(rayStartPos, rayDirection * 7f, Color.red);
         }
 
         if (_startScanning)
@@ -582,7 +599,7 @@ public class Database : MonoBehaviour
     }
     IEnumerator WaitTime()
     {
-       yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.5f);
         _scanContainer.SetActive(false);
     }
 }
