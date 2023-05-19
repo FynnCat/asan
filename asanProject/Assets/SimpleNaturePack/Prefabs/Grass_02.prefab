@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3179745384788728865}
   - component: {fileID: 2908698160580242124}
   - component: {fileID: 1529063848705849805}
+  - component: {fileID: 2785247594381871596}
   m_Layer: 0
   m_Name: Grass_02
   m_TagString: Grass_02
@@ -95,9 +96,9 @@ MeshCollider:
   m_GameObject: {fileID: 3356751432538110193}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
 --- !u!114 &2908698160580242124
@@ -128,3 +129,16 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.098000005, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &2785247594381871596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356751432538110193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.17033736, y: 0.19709493, z: 0.19133186}
+  m_Center: {x: -0.00038453192, y: 0.09759847, z: 0.00045244768}

@@ -14,18 +14,18 @@ public static class SaveSystem
         Debug.Log(path);
 
         PlayerData data = new PlayerData(_saveManager);
-
+        Debug.Log(data.level + "\n" + data.time + "\n" + data.conpletion + "\n" + data.planetValue + "\n" + data.playerChoice);
         formatter.Serialize(stream, data);
         stream.Close();
     }
 
     public static PlayerData LoadMoney()
     {
-        Debug.Log(Application.persistentDataPath);
+        //Debug.Log(Application.persistentDataPath);
         path = Application.persistentDataPath + "/SaveData.txt";
         if (File.Exists(path))
         {
-            Debug.Log("Path: " + path);
+            //Debug.Log("Path: " + path);
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 

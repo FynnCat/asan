@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:asanProject/Assets/Prefabs/Better_Prefabs_Folder/Flight_Fish.meta
+guid: 14d49f1e4cc09c64a88a747493bb18b2
+folderAsset: yes
+DefaultImporter:
+========
 guid: 19769b6c8dd070541b904c2cf6fe4811
 PrefabImporter:
+>>>>>>>> main:asanProject/Assets/Prefabs/Creatures/Final/ASAN_Creature_01.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

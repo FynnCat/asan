@@ -12,6 +12,7 @@ public class OxygenManager : MonoBehaviour
     [SerializeField] TriggerEnterEnemies _enterEnemies;
     [SerializeField] Text _fillText, _endExplorationText;
     [SerializeField] int _refills;
+    [SerializeField] ExitGamePlay _exitGamePlay;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,8 @@ public class OxygenManager : MonoBehaviour
         _oxygenSlider.value = _currentOxygen;
         if (_currentOxygen <= 0)
         {
-            SceneManager.LoadScene(0);
+            _exitGamePlay.SaveSelection();
+            SceneManager.LoadScene("DeathScene");
         }
         if (_enterEnemies.entered)
         {
