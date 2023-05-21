@@ -878,6 +878,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8444526059723504850, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1000420690}
+    - target: {fileID: 8444526059723504850, guid: abab7ab2caa328d41ba3571d0cc4a756, type: 3}
       propertyPath: movementSpeed
       value: 7
       objectReference: {fileID: 0}
@@ -2959,7 +2963,7 @@ Transform:
   m_Children:
   - {fileID: 1038252734}
   m_Father: {fileID: 167608910}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1000420692
 MonoBehaviour:
