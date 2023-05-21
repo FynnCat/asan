@@ -13,6 +13,9 @@ public class OxygenManager : MonoBehaviour
     [SerializeField] Text _fillText, _endExplorationText;
     [SerializeField] int _refills;
     [SerializeField] ExitGamePlay _exitGamePlay;
+    [SerializeField] Image _oxygenFill;
+    [SerializeField] AudioSource _oxygenAlert;
+    bool _playedOxygenLow = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,18 @@ public class OxygenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         _oxygenSlider.value = _currentOxygen;
+        if (_currentOxygen <= 40)
+        {
+            _oxygenFill.color = Color.red;
+            
+            if(_playedOxygenLow == false)
+            {
+            _oxygenAlert.Play();
+                _playedOxygenLow = true;
+            }
+        }
         if (_currentOxygen <= 0)
         {
             _exitGamePlay.SaveSelection();

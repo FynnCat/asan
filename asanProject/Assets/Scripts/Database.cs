@@ -21,6 +21,7 @@ public class Database : MonoBehaviour
     [SerializeField] TMP_Text _InfoText;
     [SerializeField] AudioSource _scanAudioClip;
     [SerializeField] AudioSource _endScanAudioSource;
+    [SerializeField] ParticleSystem _scanParticle;
     // Start is called before the first frame update
     
     void Start()
@@ -30,6 +31,7 @@ public class Database : MonoBehaviour
         _saveSceneScript = GameObject.FindObjectOfType<saveSceneScript>();
         _scanSlider.maxValue = defaultTime;
         _scanSlider.minValue = 0;
+        _scanSlider.value = 0;
 
     }
 
@@ -74,9 +76,10 @@ public class Database : MonoBehaviour
                         _scanSliderObject.SetActive(false);
                         _startScanning = false;
                         scanTime = 0;
-                        OnScan();
+                        //OnScan();
+                        _scanParticle.Stop();
                         _scanAudioClip.Stop();
-                        _endScanAudioSource.Play();
+                       
                     }
                 }
             }
@@ -93,6 +96,7 @@ public class Database : MonoBehaviour
             _scanSlider.value = scanTime;
             if (scanTime >= defaultTime)
             {
+                _scanParticle.Stop();
                 _scanSliderObject.SetActive(false);
                 _startScanning = false;
                 scanTime = 0;
@@ -221,6 +225,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Branch_01 = true;
@@ -236,6 +241,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Bush_01 = true;
@@ -251,6 +257,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Bush_02 = true;
@@ -266,6 +273,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Bush_03 = true;
@@ -281,6 +289,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Flowers_01 = true;
@@ -296,6 +305,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Flowers_02 = true;
@@ -311,6 +321,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Grass_01 = true;
@@ -326,6 +337,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Grass_02 = true;
@@ -341,6 +353,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Mushroom_01 = true;
@@ -356,6 +369,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Mushroom_02 = true;
@@ -371,6 +385,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Rock_01 = true;
@@ -386,6 +401,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Rock_02 = true;
@@ -401,6 +417,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Rock_03 = true;
@@ -416,6 +433,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Rock_04 = true;
@@ -431,6 +449,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Rock_05 = true;
@@ -446,6 +465,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Stump_01 = true;
@@ -461,6 +481,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Tree_01 = true;
@@ -476,6 +497,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Tree_02 = true;
@@ -491,6 +513,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Tree_03 = true;
@@ -506,6 +529,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Tree_04 = true;
@@ -521,6 +545,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 Tree_05 = true;
@@ -536,6 +561,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 ASAN_Creature_01 = true;
@@ -551,6 +577,7 @@ public class Database : MonoBehaviour
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 ASAN_Creature_02 = true;
@@ -561,11 +588,12 @@ public class Database : MonoBehaviour
                 {
                     Debug.Log(hit.transform.tag);
                     _saveSceneScript._numberOfItemsScanned++;
-                    _experienceManager.HabGoodSlider.value++;
+                    _experienceManager.HabBadSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 ASAN_Creature_03 = true;
@@ -576,11 +604,12 @@ public class Database : MonoBehaviour
                 {
                     Debug.Log(hit.transform.tag);
                     _saveSceneScript._numberOfItemsScanned++;
-                    _experienceManager.HabGoodSlider.value++;
+                    _experienceManager.HabBadSlider.value++;
                     _experienceManager.exp = _experienceManager.exp + 15;
                     PlanetValue = PlanetValue + 5;
                     _scanContainer.SetActive(true);
                     _InfoText.text = hit.transform.tag;
+                    _endScanAudioSource.Play();
                     StartCoroutine(WaitTime());
                 }
                 ASAN_Creature_04 = true;
@@ -592,6 +621,8 @@ public class Database : MonoBehaviour
     {
         if (_startScanning == false)
         {
+            _scanSlider.value = 0;
+            _scanParticle.Play();
             _scanSliderObject.SetActive(true);
             _startScanning = true;
             _scanAudioClip.Play();
