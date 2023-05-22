@@ -15,10 +15,12 @@ public class OxygenManager : MonoBehaviour
     [SerializeField] ExitGamePlay _exitGamePlay;
     [SerializeField] Image _oxygenFill;
     [SerializeField] AudioSource _oxygenAlert;
+    [SerializeField] Color _oxygenDefaultColor;
     bool _playedOxygenLow = false;
     // Start is called before the first frame update
     void Start()
     {
+        _oxygenDefaultColor = _oxygenFill.color;
         _currentOxygen = _maxOxygen;
         _oxygenSlider.maxValue = _maxOxygen;
         StartCoroutine(WaitTime());
@@ -69,6 +71,7 @@ public class OxygenManager : MonoBehaviour
     {
         if (_enterEnemies.entered && _refills != 9)
         {
+            _oxygenFill.color = _oxygenDefaultColor;
             _currentOxygen = _maxOxygen;
             _refills++;
         }

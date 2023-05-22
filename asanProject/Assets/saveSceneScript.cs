@@ -21,6 +21,7 @@ public class saveSceneScript : MonoBehaviour
     public int planetValue;
     public float playersChoice;
     [SerializeField] Database _database;
+    [SerializeField] TriggerEnterEnemies _enterEnemies;
     // Start is called before the first frame update
     void Start()
     {
@@ -84,7 +85,7 @@ public class saveSceneScript : MonoBehaviour
 
     public void EndMenuGameplay()
     {
-        if (_exitGamePlay._endPanelActive == false)
+        if (_exitGamePlay._endPanelActive == false && _enterEnemies.entered)
         {
             _exitGamePlay._endPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;

@@ -45,7 +45,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5169774704769546523}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -141,6 +141,7 @@ MonoBehaviour:
   moveSpeed: 5
   detectionRange: 10
   navMeshAgent: {fileID: 5240490798628444786}
+  _spooderAnimator: {fileID: 0}
 --- !u!65 &-4680312906587641370
 BoxCollider:
   m_ObjectHideFlags: 0
