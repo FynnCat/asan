@@ -89,6 +89,7 @@ public class saveSceneScript : MonoBehaviour
             _exitGamePlay._endPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             _exitGamePlay._endPanelActive = true;
+            _exitGamePlay._pauseGame.PauseGameplay();
         }
     }
 

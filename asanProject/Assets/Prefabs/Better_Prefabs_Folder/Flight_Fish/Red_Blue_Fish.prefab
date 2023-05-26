@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -1325006079836437786}
   - component: {fileID: 7007808254209400961}
   - component: {fileID: 4482877628446111162}
+  - component: {fileID: 4530545722230752868}
   m_Layer: 0
   m_Name: Red_Blue_Fish
   m_TagString: ASAN_Creature_02
@@ -45,7 +46,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267859227447978823}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -141,6 +142,7 @@ MonoBehaviour:
   moveSpeed: 5
   detectionRange: 10
   navMeshAgent: {fileID: -1325006079836437786}
+  _spooderAnimator: {fileID: 0}
 --- !u!65 &4482877628446111162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154,3 +156,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.68, y: 0.50024545, z: 1.5600739}
   m_Center: {x: 0, y: 0.010122955, z: -0.010036945}
+--- !u!114 &4530545722230752868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267859227447978823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0546383ae7a165488f47615b8a86257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _oxygenManager: {fileID: 0}

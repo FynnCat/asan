@@ -15,14 +15,17 @@ public class ExitGamePlay : MonoBehaviour
     [SerializeField] SaveManager _saveManager;
     [SerializeField] saveSceneScript _saveSceneScript;
     public Scene LeaveScene1, LeaveScene2, LeaveScene3, LeaveScene4, LeaveScene5, LeaveScene6, LeaveScene7, LeaveScene8;
+    public PauseGame _pauseGame;
 
     // Start is called before the first frame update
     void Start()
     {
         _saveSceneScript = GameObject.FindObjectOfType<saveSceneScript>();
         _saveManager = GameObject.FindObjectOfType<SaveManager>();
+        _pauseGame = GameObject.FindObjectOfType<PauseGame>();
         _playerChoiceSlider.minValue = -50;
         _playerChoiceSlider.maxValue = 50;
+
     }
 
     // Update is called once per frame
@@ -127,6 +130,7 @@ public class ExitGamePlay : MonoBehaviour
             _endPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             _endPanelActive = false;
+            _pauseGame.UnpauseGameplay();
         }
     }
 
